@@ -18,7 +18,7 @@
  
  ![images](images/iris.png "Iris dataset")
 
-Here on iris dataset, the classes are close to each other (even when considering the 4 dimensions). However, DECWA is able to separate the clusters with a fine precision of 0.93 in ARI score.
+Here on iris dataset, the classes are close to each other (even when considering the 4 dimensions). However, DECWA is able to separate the clusters with a fine precision of **0.93** in *ARI* score.
  
  ## Understanding DECWA
  DECWA first divide the dataset into homogeneous sub-clusters. Then merges the sub-clusters that actually belong to the same clusters according to rules detailed in the [paper](url_du_lien "DECWA : Density-Based Clustering using Wasserstein Distance").
