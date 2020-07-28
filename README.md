@@ -16,8 +16,7 @@
  
  Here the selected parameters allow DECWA to discover nested clusters on top left corner. Most density based approches tend to find two or one cluster here (due to overlapping). They are neglicting density variation, therfore, they do not find the core clusters and they do not consider the dots graviting around as potential clusters. That leads DECWA to better results in term of *ARI*, especially on real datasets where it is able to separate overlapping clusters if they have different densities.
  
- ![images](images/DECWA_on_iris_dataset.png "DECWA on Iris dataset")
- ![images](images/iris_gt.png "Iris dataset")
+ ![images](images/iris.png "Iris dataset")
 
 Here on iris dataset, the classes are close to each other (even when considering the 4 dimensions). However, DECWA is able to separate the clusters with a fine precision of 0.93 in ARI score.
  
