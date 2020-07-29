@@ -30,6 +30,7 @@ Here on Iris dataset, the classes are close to each other (even when considering
  DECWA first divides the dataset into homogeneous sub-clusters. Then merges the sub-clusters that actually belong to the same clusters according to rules detailed in the [paper](url_du_lien "DECWA : Density-Based Clustering using Wasserstein Distance").
  
  ![images](images/div_result.png "Division and fusion on jain dataset")
+ 
  Comparison of the *division* result (a) with *fusion* result (b) for jain dataset.
  
  
