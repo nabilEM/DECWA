@@ -26,8 +26,17 @@
 
 Here on Iris dataset, the classes are close to each other (even when considering the 4 dimensions). However, DECWA is able to separate the clusters with a fine precision of **0.93** in terms of *ARI* score.
  
- ## Understanding DECWA
- DECWA first divides the dataset into homogeneous sub-clusters. Then merges the sub-clusters that actually belong to the same clusters according to rules detailed in the [paper](url_du_lien "DECWA : Density-Based Clustering using Wasserstein Distance").
+ ## Steps of DECWA
+1. The first step transforms the dataset *X* into a *k*-nearest neighbor graph representation.
+2. The second step consists in estimating the probability density of *X* from the weights of graph. 
+3. The third step consists of extracting sub-clusters from the graph using probability density. (Division)
+4. The fourth step is to agglomerate sub-clusters according to spatial distance and Wasserstein distance. (Fusion)
  
+ In the image below, DECWA first divides the dataset into homogeneous sub-clusters then merges the sub-clusters according to spatial distance and Wasserstein distance.
  ![images](images/div_result.png "Division and fusion on jain dataset")
+ 
+ In the fusion process, Wasserstein distance has a major role, it ensure that sub-clusters are similar in their structure.
+ In the figure bellow, the distances between the probability distributions of two clusters are calculated to verify if the samples are from the same law of probability.
+ 
+  ![images](images/wasserstein.png "Comparison between different and similar clusters")
  
