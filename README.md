@@ -31,6 +31,3 @@ Here on Iris dataset, the classes are close to each other (even when considering
  
  ![images](images/div_result.png "Division and fusion on jain dataset")
  
- Comparison of the *division* result (a) with *fusion* result (b) for jain dataset.
- 
- 
