@@ -9,6 +9,9 @@
  CIKM 2020
  ```
  
+ ## Implementation
+ By now, the algorithm is functional, however, it is still a prototype in python. Therefore, a C implementation is studied in order to offer great efficiency.
+ 
  ## Results of DECWA
  Unlike most density-based clustering algorithm, DECWA does not focus on high-density points, it aims to find areas of homogeneous density, therefore, it is able to find low-density clusters.
  
@@ -44,3 +47,18 @@ In the figure bellow, the distances between the probability distributions of two
 ![images](images/jain_fusion_distrib.png "Two sub-clusters with similar probability density functions")
 
 Here the numerical value of Wasserstein distance is equal to **0.0248**. Therefore, depending on user needs, this may lead or not to the fusion of the concerned dataset. This can be adjusted by setting a threshold. Here, according to the ground truth, a correct threshold value for the whole dataset is **2**.
+
+The table below gives the best parameters we obtained using random search on each dataset. This parameters allow to find the results presented in the paper.
+
+| Dataset          |     ⍺ |   λ   |  h    | k  |  distance  |
+| :------------    | :---: | :---: | :---: |:--:| ---------: |
+| jain             | 2.25  |  2.18 |  8.83 | 6  |  euclidean |
+| cluto-t7.10k     | 23.34 |  5.57 |  0.20 | 35 |  euclidean |
+| compound         |  0.73 |  2.39 |  1.78 |  3 |  euclidean |
+| pathbased        |  0.72 |  1.94 |  0.75 |  7 |  euclidean |
+| iris             |  0.77 |  0.61 |  0.10 | 12 |  cityblock |
+| cardiotocography |  2.90 |  2.18 |  0.85 |  3 |   canberra |
+| plant            | 0.000 | 0.002 | 0.001 | 40 |  euclidean |
+| GCM              | 0.058 | 0.294 | 0.045 |  2 | braycurtis |
+| News             |  0.45 |  0.41 |  0.49 | 29 |     cosine |
+| Kidney_Uter      |  0.04 |  0.30 |  0.00 |  9 | braycurtis |
