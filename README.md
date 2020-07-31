@@ -37,7 +37,10 @@ In the image below, DECWA first divides the dataset into homogeneous sub-cluster
 ![images](images/div_result.png "Division and fusion on jain dataset")
  
 In the fusion process, Wasserstein distance has a major role, it ensure that sub-clusters are similar in their structure.
-In the figure bellow, the distances between the probability distributions of two clusters are calculated to verify if the samples are from the same law of probability.
+In the figure bellow, the distances between the probability distributions of two sub-clusters are calculated to verify if the samples are from the same law of probability.
  
-![images](images/wasserstein.png "Comparison between different and similar clusters")
+![images](images/jain_fusion.png "Two sub-clusters with similar probability density functions")
  
+![images](images/jain_fusion_distrib.png "Two sub-clusters with similar probability density functions")
+
+Here the numerical value of Wasserstein distance is equal to **0.0248**. Therefore, depending on user needs, this may lead or not to the fusion of the concerned dataset. This can be adjusted by setting a threshold. Here, according to the ground truth, a correct threshold value for the whole dataset is **2**.

@@ -1,7 +1,7 @@
 # DECWA
- DECWA (**DE**nsity-based **C**lusteringusing **WA**sserstein distance) is a hybrid clustering algorithm combining density and probabilistic approaches. It can handle several difficulties in datasets such as low-density clusters, near clusters of similar densities, and high-dimensional data. This is possible due to the probabilistic representation of clusters density and the use of Wasserstein metric which is a distance function defined between probability distributions.
+ DECWA (**DE**nsity-based **C**lusteringusing **WA**sserstein distance) is a hybrid clustering algorithm combining density and probabilistic approaches. It can handle several difficulties in datasets such as low-density clusters, near clusters of similar densities, and high-dimensional data. This is possible due to the probabilistic representation of clusters density and the use of the Wasserstein metric which is a distance function defined between probability distributions.
  
- ## Relevent publication
+ ## Relevant publication
  DECWA implements an algorithm introduced in the following [paper](url_du_lien "DECWA : Density-Based Clustering using Wasserstein Distance"):
  ```
  DECWA : Density-Based Clustering using Wasserstein Distance
@@ -24,12 +24,23 @@
  
  ![images](images/iris.png "Iris dataset")
 
-Here on iris dataset, the classes are close to each other (even when considering the 4 dimensions). However, DECWA is able to separate the clusters with a fine precision of 0.93 in ARI score.
+Here on Iris dataset, the classes are close to each other (even when considering the 4 dimensions). However, DECWA is able to separate the clusters with a fine precision of **0.93** in terms of *ARI* score.
  
- ## Understanding DECWA
- DECWA first divide the dataset into homogeneous sub-clusters. Then merges the sub-clusters that actually belong to the same clusters according to rules detailed in the [paper](url_du_lien "DECWA : Density-Based Clustering using Wasserstein Distance").
+ ## Steps of DECWA
+1. The first step transforms the dataset *X* into a *k*-nearest neighbor graph representation.
+2. The second step consists in estimating the probability density of *X* from the weights of graph. 
+3. The third step consists of extracting sub-clusters from the graph using probability density. (Division)
+4. The fourth step is to agglomerate sub-clusters according to spatial distance and Wasserstein distance. (Fusion)
+
+In the image below, DECWA first divides the dataset into homogeneous sub-clusters then merges the sub-clusters according to spatial distance and Wasserstein distance.
+
+![images](images/div_result.png "Division and fusion on jain dataset")
  
- ![images](images/div_result.png "Division and fusion on jain dataset")
- Comparison of the *division* result (a) with *fusion* result (b) for jain dataset.
+In the fusion process, Wasserstein distance has a major role, it ensure that sub-clusters are similar in their structure.
+In the figure bellow, the distances between the probability distributions of two sub-clusters are calculated to verify if the samples are from the same law of probability.
  
+![images](images/jain_fusion.png "Two sub-clusters with similar probability density functions")
  
+![images](images/jain_fusion_distrib.png "Two sub-clusters with similar probability density functions")
+
+Here the numerical value of Wasserstein distance is equal to **0.0248**. Therefore, depending on user needs, this may lead or not to the fusion of the concerned dataset. This can be adjusted by setting a threshold. Here, according to the ground truth, a correct threshold value for the whole dataset is **2**.
