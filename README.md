@@ -60,5 +60,5 @@ The table below gives the best parameters we obtained using random search on eac
 | cardiotocography |  2.90 |  2.18 |  0.85 |  3 |   canberra |
 | plant            | 0.000006 | 0.002 | 0.001 | 40 |  euclidean |
 | GCM              | 0.058 | 0.294 | 0.045 |  2 | braycurtis |
-| News             |  0.45 |  0.41 |  0.49 | 29 |     cosine |
-| Kidney_Uter      |  0.04 |  0.30 |  0.00 |  9 | braycurtis |
+| new3             |  0.45 |  0.41 |  0.49 | 29 |     cosine |
+| kidney_uterus      |  0.04 |  0.30 |  0.00 |  9 | braycurtis |
