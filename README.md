@@ -46,7 +46,7 @@ In the figure bellow, the distances between the probability distributions of two
  
 ![images](images/jain_fusion_distrib.png "Two sub-clusters with similar probability density functions")
 
-Here the numerical value of Wasserstein distance is equal to **0.0248**. Therefore, depending on user needs, this may lead or not to the fusion of the concerned dataset. This can be adjusted by setting a threshold. Here, according to the ground truth, a correct threshold value for the whole dataset is **2**.
+Here the numerical value of Wasserstein distance is equal to **0.0248**. Therefore, depending on user needs, this may lead or not to the fusion of the concerned dataset. This can be adjusted by setting a threshold. Here, according to the ground truth, a correct threshold value for the whole dataset is **2.25**.
 
 The table below gives the best parameters we obtained using random search on each dataset. This parameters allow to find the results presented in the paper.
 
