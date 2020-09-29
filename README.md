@@ -1,5 +1,5 @@
 # DECWA
- DECWA (**DE**nsity-based **C**lusteringusing **WA**sserstein distance) is a hybrid clustering algorithm combining density and probabilistic approaches. It can handle several difficulties in datasets such as low-density clusters, near clusters of similar densities, and high-dimensional data. This is possible due to the probabilistic representation of clusters density and the use of the Wasserstein metric which is a distance function defined between probability distributions.
+ DECWA (**DE**nsity-based **C**lustering using **WA**sserstein distance) is a hybrid clustering algorithm combining density and probabilistic approaches. It can handle several difficulties in datasets such as low-density clusters, near clusters of similar densities, and high-dimensional data. This is possible due to the probabilistic representation of clusters density and the use of the Wasserstein metric which is a distance function defined between probability distributions.
  
  ## Relevant publication
  DECWA implements an algorithm introduced in the following [paper](https://dl.acm.org/doi/10.1145/3340531.3412125 "DECWA : Density-Based Clustering using Wasserstein Distance"):
